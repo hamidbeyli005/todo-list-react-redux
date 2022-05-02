@@ -23,7 +23,7 @@ export const TodoSlice = createSlice({
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },
     completedTodo: (state, action) => {
-      state.todos.map((todo) => {
+      state.todos.forEach((todo) => {
         if (todo.id === action.payload.id) {
           todo.completed = !todo.completed;
         }
